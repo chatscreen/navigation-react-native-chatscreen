@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Ionicons, FontAwesome5 } from "@expo/vector-icons";
+import SearchBar from "../components/SearchBar";
 const LocationsHeader = () => {
   return (
     <View style={styles.container}>
@@ -10,6 +11,7 @@ const LocationsHeader = () => {
         <FontAwesome5 name="map-marker-alt" size={30} color="#5F6FEE" />
       </View>
       <Text style={styles.text}>Locations</Text>
+      <SearchBar />
     </View>
   );
 };

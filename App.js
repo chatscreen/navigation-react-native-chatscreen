@@ -11,7 +11,11 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
           <Stack.Screen name="Locations" component={LocationsScreen} />
           <Stack.Screen name="About" component={AboutScreen} />
         </Stack.Navigator>
