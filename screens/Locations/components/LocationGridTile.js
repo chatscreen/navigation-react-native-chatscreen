@@ -16,6 +16,7 @@ function CategoryGridTile({
   distance,
   type,
   color,
+  onPress,
 }) {
   const backgroundImage = {
     uri: image,
@@ -33,6 +34,7 @@ function CategoryGridTile({
             styles.button,
             pressed ? styles.buttonPressed : null,
           ]}
+          onPress={onPress}
         >
           <View style={styles.innerContainer}>
             <View style={{ width: "100%", flexDirection: "row" }}>

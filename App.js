@@ -1,8 +1,23 @@
 import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import LocationsScreen from "./screens/Locations/LocationsScreen";
+import AboutScreen from "./screens/About/AboutScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return <LocationsScreen />;
+  return (
+    <>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Locations" component={LocationsScreen} />
+          <Stack.Screen name="About" component={AboutScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
