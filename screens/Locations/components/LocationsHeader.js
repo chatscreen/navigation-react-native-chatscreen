@@ -1,12 +1,20 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Button } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import { Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import SearchBar from "../components/SearchBar";
 const LocationsHeader = () => {
   return (
     <View style={styles.container}>
       <View style={styles.flexGrid}>
-        <Ionicons name="md-menu" size={40} color="#5F6FEE" />
+        <Pressable
+          title=""
+          onPress={() => {
+            console.log("hi");
+          }}
+        >
+          <Ionicons name="md-menu" size={40} color="#5F6FEE" />
+        </Pressable>
         <View style={styles.spacer} />
         <FontAwesome5 name="map-marker-alt" size={30} color="#5F6FEE" />
       </View>
