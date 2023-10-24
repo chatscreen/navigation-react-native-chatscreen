@@ -25,7 +25,39 @@ function CategoryGridTile({ title, color, image }) {
           ]}
         >
           <View style={styles.innerContainer}>
-            <Text style={styles.title}>{title}</Text>
+            <View style={{ width: "100%", flexDirection: "row" }}>
+              <Text style={styles.title}>{title}</Text>
+              <Text style={styles.icon}>icon</Text>
+            </View>
+            <View
+              style={{
+                width: "100%",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text style={styles.address}>address</Text>
+              <Text style={styles.visited}>visited</Text>
+            </View>
+            <View
+              style={{
+                width: "100%",
+                flexDirection: "row",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Text style={styles.distance}>distance</Text>
+            </View>
+            <View
+              style={{
+                width: "100%",
+                flexDirection: "row",
+
+                justifyContent: "flex-end",
+              }}
+            >
+              <Text style={styles.chatButton}>open chat</Text>
+            </View>
           </View>
         </Pressable>
       </ImageBackground>
@@ -49,6 +81,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 8,
     overflow: "hidden",
+    flexDirection: "column",
   },
   button: {
     flex: 1,
@@ -57,7 +90,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     padding: 16,
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "rgba(0,0,0,0.3)",
   },
@@ -66,9 +99,29 @@ const styles = StyleSheet.create({
     fontSize: 28,
     color: "white",
   },
+  icon: {
+    color: "white",
+    backgroundColor: "red",
+  },
+  address: {
+    color: "white",
+    backgroundColor: "red",
+  },
+  visited: {
+    color: "white",
+    backgroundColor: "blue",
+  },
   image: {
     flex: 1,
     justifyContent: "center",
     tintColor: "black",
+  },
+  distance: {
+    color: "white",
+    backgroundColor: "pink",
+  },
+  chatButton: {
+    color: "white",
+    backgroundColor: "yellow",
   },
 });

@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
-import CategoriesScreen from "./screens/CategoriesScreen";
+import LocationsScreen from "./screens/Locations/LocationsScreen";
 
 export default function App() {
-  return <CategoriesScreen />;
+  return <LocationsScreen />;
 }
 
 const styles = StyleSheet.create({
