@@ -37,7 +37,13 @@ function CategoryGridTile({
           onPress={onPress}
         >
           <View style={styles.innerContainer}>
-            <View style={{ width: "100%", flexDirection: "row" }}>
+            <View
+              style={{
+                width: "100%",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
               <Text style={styles.title}>{title}</Text>
               <View
                 style={{
@@ -109,7 +115,7 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
   },
-  buttonPressed: { opacity: 0, backgroundColor: "black" },
+  //buttonPressed: { opacity: 1, backgroundColor: "black" },
   innerContainer: {
     flex: 1,
     padding: 16,
