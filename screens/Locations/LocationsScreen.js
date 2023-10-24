@@ -9,7 +9,16 @@ const screenWidth = Dimensions.get("window").width;
 function LocationsScreen({ navigation }) {
   function renderLocationItem(itemData) {
     function pressHandler() {
-      navigation.navigate("About");
+      navigation.navigate("About", {
+        categoryId: itemData.item.id,
+        title: itemData.item.title,
+        image: itemData.item.image,
+        address: itemData.item.address,
+        visited: itemData.item.visited,
+        distance: itemData.item.distance,
+        type: itemData.item.type,
+        color: itemData.item.color,
+      });
     }
     return (
       <LocationGridTile
