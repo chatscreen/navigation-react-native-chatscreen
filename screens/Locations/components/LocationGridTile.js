@@ -6,7 +6,17 @@ import {
   ImageBackground,
 } from "react-native";
 
-function CategoryGridTile({ title, color, image }) {
+import { FontAwesome5 } from "@expo/vector-icons";
+
+function CategoryGridTile({
+  title,
+  image,
+  address,
+  visited,
+  distance,
+  type,
+  color,
+}) {
   const backgroundImage = {
     uri: image,
   };
@@ -27,7 +37,18 @@ function CategoryGridTile({ title, color, image }) {
           <View style={styles.innerContainer}>
             <View style={{ width: "100%", flexDirection: "row" }}>
               <Text style={styles.title}>{title}</Text>
-              <Text style={styles.icon}>icon</Text>
+              <View
+                style={{
+                  borderRadius: 50,
+                  backgroundColor: color,
+                  height: 35,
+                  width: 35,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <FontAwesome5 name={type} size={20} color="#fff" />
+              </View>
             </View>
             <View
               style={{
@@ -36,8 +57,8 @@ function CategoryGridTile({ title, color, image }) {
                 justifyContent: "space-between",
               }}
             >
-              <Text style={styles.address}>address</Text>
-              <Text style={styles.visited}>visited</Text>
+              <Text style={styles.address}>{address}</Text>
+              <Text style={styles.visited}>visited {visited} times</Text>
             </View>
             <View
               style={{
@@ -46,7 +67,7 @@ function CategoryGridTile({ title, color, image }) {
                 justifyContent: "flex-end",
               }}
             >
-              <Text style={styles.distance}>distance</Text>
+              <Text style={styles.distance}>{distance} km</Text>
             </View>
             <View
               style={{
@@ -86,30 +107,33 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
   },
-  buttonPressed: { opacity: 0.5 },
+  buttonPressed: { opacity: 0, backgroundColor: "black" },
   innerContainer: {
     flex: 1,
     padding: 16,
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "rgba(0,0,0,0.3)",
+    backgroundColor: "rgba(0,0,0,0.55)",
   },
   title: {
     fontWeight: "bold",
     fontSize: 28,
     color: "white",
+    paddingRight: 10,
   },
   icon: {
     color: "white",
-    backgroundColor: "red",
   },
   address: {
     color: "white",
-    backgroundColor: "red",
   },
   visited: {
     color: "white",
-    backgroundColor: "blue",
+    backgroundColor: "#5F6FEE",
+    position: "absolute",
+    right: -16,
+    width: 130,
+    textAlign: "center",
   },
   image: {
     flex: 1,
@@ -118,10 +142,15 @@ const styles = StyleSheet.create({
   },
   distance: {
     color: "white",
-    backgroundColor: "pink",
+    fontWeight: "bold",
   },
   chatButton: {
-    color: "white",
-    backgroundColor: "yellow",
+    color: "black",
+    backgroundColor: "white",
+    padding: 8,
+    borderRadius: 30,
+    fontSize: 20,
+    width: 110,
+    opacity: 0.6,
   },
 });

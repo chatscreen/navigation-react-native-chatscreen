@@ -9,6 +9,10 @@ function renderLocationItem(itemData) {
     <LocationGridTile
       image={itemData.item.image}
       title={itemData.item.title}
+      address={itemData.item.address}
+      visited={itemData.item.visited}
+      distance={itemData.item.distance}
+      type={itemData.item.type}
       color={itemData.item.color}
     />
   );

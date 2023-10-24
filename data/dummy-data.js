@@ -1,67 +1,107 @@
-import Category from "../models/category";
+import Location from "../models/locations";
 import Meal from "../models/meal";
 
 export const CATEGORIES = [
-  new Category(
+  new Location(
     "c1",
     "Ashs Bar",
-    "#f5428d",
-    "https://www.dunedinnz.com/__data/assets/image/0004/887827/pizzabar-1035x690-1.jpg"
+    "https://www.dunedinnz.com/__data/assets/image/0004/887827/pizzabar-1035x690-1.jpg",
+    "Dunedin\n324 William Street",
+    "3",
+    "1.25",
+    "beer",
+    "#ffd300"
   ),
-  new Category(
+  new Location(
     "c2",
     "Angelos Cafe",
-    "#f54242",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/R%C3%B6e_g%C3%A5rd_caf%C3%A9_2.jpg/1200px-R%C3%B6e_g%C3%A5rd_caf%C3%A9_2.jpg"
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/R%C3%B6e_g%C3%A5rd_caf%C3%A9_2.jpg/1200px-R%C3%B6e_g%C3%A5rd_caf%C3%A9_2.jpg",
+    "Dunedin\n232 Fey Street",
+    "7",
+    "5",
+    "coffee",
+    "#ff8700"
   ),
-  new Category(
+  new Location(
     "c3",
     "Danger Nightclub",
-    "#f5a442",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBomVLOVlMXToUjPZ4gYvCzA38NwBFnGGsU--P3mgxdHiPzPulE3OOTK0LOP_0N0rjrMc&usqp=CAU"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBomVLOVlMXToUjPZ4gYvCzA38NwBFnGGsU--P3mgxdHiPzPulE3OOTK0LOP_0N0rjrMc&usqp=CAU",
+    "Dunedin\n237 Pine Hill Road",
+    "1",
+    "8",
+    "beer",
+    "#ffd300"
   ),
-  new Category(
+  new Location(
     "c4",
     "Martins Bookstore",
-    "#f5d142",
-    "https://s26162.pcdn.co/wp-content/uploads/sites/3/2023/02/used-books.jpg"
+    "https://s26162.pcdn.co/wp-content/uploads/sites/3/2023/02/used-books.jpg",
+    "Dunedin\n332 Green Ridge Hill",
+    "11",
+    "8.5",
+    "book",
+    "#deff0a"
   ),
-  new Category(
+  new Location(
     "c5",
     "Central Airport",
-    "#368dff",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mumbai_03-2016_114_Airport_international_terminal_interior.jpg/1200px-Mumbai_03-2016_114_Airport_international_terminal_interior.jpg"
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mumbai_03-2016_114_Airport_international_terminal_interior.jpg/1200px-Mumbai_03-2016_114_Airport_international_terminal_interior.jpg",
+    "Christchurch\n32 Manly Road",
+    "4",
+    "209",
+    "plane",
+    "#0aff99"
   ),
 
-  new Category(
+  new Location(
     "c6",
     "Old Gregs Steakhouse",
-    "#41d95d",
-    "https://cdn.sanity.io/images/p6oh2x2n/production/beb4f4c5ca22fab305d67338f93c3bc2f3337fbe-1920x1080.jpg?w=1920&h=1080&auto=format"
+    "https://cdn.sanity.io/images/p6oh2x2n/production/beb4f4c5ca22fab305d67338f93c3bc2f3337fbe-1920x1080.jpg?w=1920&h=1080&auto=format",
+    "Christchurch\n33 Pennyville Lane",
+    "8",
+    "9.75",
+    "hamburger",
+    "#0aefff"
   ),
-  new Category(
+  new Location(
     "c7",
     "Billabong Backpackers",
-    "#9eecff",
-    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/97/3d/ca/pool.jpg?w=600&h=-1&s=1"
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/97/3d/ca/pool.jpg?w=600&h=-1&s=1",
+    "Christchurch\n341 Bond Street",
+    "2",
+    "210.75",
+    "hotel",
+    "#147df5"
   ),
-  new Category(
+  new Location(
     "c8",
     "Jessicas Hair Salon",
-    "#b9ffb0",
-    "https://images.squarespace-cdn.com/content/v1/61dc934ac1f05c5947530bba/4d41c73a-366b-41e2-a484-0923aba42766/hq_aug22-50.jpg"
+    "https://images.squarespace-cdn.com/content/v1/61dc934ac1f05c5947530bba/4d41c73a-366b-41e2-a484-0923aba42766/hq_aug22-50.jpg",
+    "Nelson\n837 Meryl Ave",
+    "14",
+    "859",
+    "plus",
+    "#580aff"
   ),
-  new Category(
+  new Location(
     "c9",
     "City Shopping Mall",
-    "#ffc7ff",
-    "https://jingdaily.com/wp-content/uploads/2022/02/china-shopping-mall-global-harbor.jpg"
+    "https://jingdaily.com/wp-content/uploads/2022/02/china-shopping-mall-global-harbor.jpg",
+    "Auckland\n299 Greyton Road",
+    "12",
+    "1453",
+    "shopping-basket",
+    "#be0aff"
   ),
-  new Category(
+  new Location(
     "c10",
     "Oakridge University",
-    "#47fced",
-    "https://www.asu.edu/sites/default/files/2023-10/HomepageHero-WestValley-drone2.jpg"
+    "https://www.asu.edu/sites/default/files/2023-10/HomepageHero-WestValley-drone2.jpg",
+    "Auckland\n232 Dodger Steet",
+    "1",
+    "1493",
+    "school",
+    "#ff0059"
   ),
 ];
 
