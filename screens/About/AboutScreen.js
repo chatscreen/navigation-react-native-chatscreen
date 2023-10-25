@@ -13,7 +13,6 @@ import { Meals } from "../../data/dummy-data";
 function AboutScreen({ route }) {
   const navigation = useNavigation();
 
-  const catId = route.params.categoryId;
   const title = route.params.title;
   const image = route.params.image;
   const address = route.params.address;

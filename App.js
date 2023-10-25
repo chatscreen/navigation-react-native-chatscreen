@@ -21,7 +21,13 @@ export default function App() {
     // Add your logic to toggle the menu here
   };
 
-  toggleMenu(0);
+  const toggleMenuHandler = () => {
+    toggleMenu(75);
+  };
+
+  const toggleMenuClose = () => {
+    toggleMenu(0);
+  };
 
   return (
     <>
@@ -38,14 +44,18 @@ export default function App() {
               },
             ]}
           >
-            <Navbar />
+            <Navbar toggleMenuClose={toggleMenuClose} />
           </Animated.View>
           <Stack.Navigator
             screenOptions={{
               headerShown: false,
             }}
           >
-            <Stack.Screen name="Locations" component={LocationsScreen} />
+            <Stack.Screen name="Locations">
+              {(props) => (
+                <LocationsScreen {...props} onPress={toggleMenuHandler} />
+              )}
+            </Stack.Screen>
             <Stack.Screen name="About" component={AboutScreen} />
           </Stack.Navigator>
         </View>

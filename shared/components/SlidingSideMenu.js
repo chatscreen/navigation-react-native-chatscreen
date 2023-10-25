@@ -2,7 +2,7 @@ import { Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
-const Navbar = () => {
+const Navbar = ({ toggleMenuClose }) => {
   const navigation = useNavigation();
 
   const goToNewsFeed = () => {
@@ -16,8 +16,8 @@ const Navbar = () => {
   return (
     <View style={styles.container}>
       <View style={styles.menu}>
-        <Button title="About" onPress={goToNewsFeed} />
-        <Button title="Locations" onPress={goToProfile} />
+        <Button title="About" onPress={goToNewsFeed && toggleMenuClose} />
+        <Button title="Locations" onPress={goToProfile && toggleMenuClose} />
       </View>
     </View>
   );

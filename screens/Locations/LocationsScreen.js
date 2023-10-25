@@ -6,7 +6,7 @@ import { CATEGORIES } from "../../data/dummy-data";
 // helper function to keep the main jsx cleaner
 const screenWidth = Dimensions.get("window").width;
 
-function LocationsScreen({ navigation }) {
+function LocationsScreen({ navigation, onPress }) {
   function renderLocationItem(itemData) {
     function pressHandler() {
       navigation.navigate("About", {
@@ -37,7 +37,7 @@ function LocationsScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View>
-        <LocationsHeader />
+        <LocationsHeader onPress={onPress} />
         <FlatList
           data={CATEGORIES}
           keyExtractor={(item) => item.id}

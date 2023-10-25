@@ -1,16 +1,23 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Button } from "react-native";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  DeviceEventEmitter,
+} from "react-native";
 import { Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import SearchBar from "../components/SearchBar";
-const LocationsHeader = () => {
+const LocationsHeader = ({ onPress }) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.flexGrid}>
         <Pressable
-          title=""
           onPress={() => {
-            console.log("hi");
+            onPress();
           }}
         >
           <Ionicons name="md-menu" size={40} color="#5F6FEE" />
