@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 20,
     borderRadius: 8,
-    marginBottom: 20,
   },
   bar: {
     flex: 1,

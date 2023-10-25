@@ -10,7 +10,7 @@ export const CATEGORIES = [
     "3",
     "1.25",
     "beer",
-    "#ffd300"
+    "#e56b1f"
   ),
   new Location(
     "c2",
@@ -20,7 +20,7 @@ export const CATEGORIES = [
     "7",
     "5",
     "coffee",
-    "#ff8700"
+    "#e42c6a"
   ),
   new Location(
     "c3",
@@ -30,7 +30,7 @@ export const CATEGORIES = [
     "1",
     "8",
     "beer",
-    "#ffd300"
+    "#3eb650"
   ),
   new Location(
     "c4",
@@ -40,7 +40,7 @@ export const CATEGORIES = [
     "11",
     "8.5",
     "book",
-    "#deff0a"
+    "#e12b38"
   ),
   new Location(
     "c5",
@@ -50,7 +50,7 @@ export const CATEGORIES = [
     "4",
     "209",
     "plane",
-    "#0aff99"
+    "#2a3166"
   ),
 
   new Location(
@@ -61,7 +61,7 @@ export const CATEGORIES = [
     "8",
     "9.75",
     "hamburger",
-    "#0aefff"
+    "#ee7879"
   ),
   new Location(
     "c7",
@@ -71,7 +71,7 @@ export const CATEGORIES = [
     "2",
     "210.75",
     "hotel",
-    "#147df5"
+    "#0f2557"
   ),
   new Location(
     "c8",
@@ -81,7 +81,7 @@ export const CATEGORIES = [
     "14",
     "859",
     "plus",
-    "#580aff"
+    "#28559a"
   ),
   new Location(
     "c9",
@@ -91,7 +91,7 @@ export const CATEGORIES = [
     "12",
     "1453",
     "shopping-basket",
-    "#be0aff"
+    "#3778c2"
   ),
   new Location(
     "c10",

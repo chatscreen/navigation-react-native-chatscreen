@@ -9,6 +9,7 @@ import {
   StatusBar,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import SidewaysScrollView from "./components/Scrolltab";
 import { Meals } from "../../data/dummy-data";
 function AboutScreen({ route }) {
   const navigation = useNavigation();
@@ -95,7 +96,9 @@ function AboutScreen({ route }) {
         <Text style={styles.visited}>Visited {visited} times</Text>
       </View>
       <Image source={{ uri: image }} style={styles.image} />
-      <View style={styles.bottomBox} />
+      <View style={styles.bottomBox}>
+        <SidewaysScrollView />
+      </View>
     </View>
   );
 }

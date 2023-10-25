@@ -29,7 +29,7 @@ function CategoryGridTile({
         style={styles.image}
       >
         <Pressable
-          android_ripple={{ color: "#ccc" }}
+          android_ripple={{ color: "lightgrey" }}
           style={({ pressed }) => [
             styles.button,
             pressed ? styles.buttonPressed : null,
@@ -53,9 +53,10 @@ function CategoryGridTile({
                   width: 35,
                   justifyContent: "center",
                   alignItems: "center",
+                  marginTop: 5,
                 }}
               >
-                <FontAwesome5 name={type} size={20} color="#fff" />
+                <FontAwesome5 name={type} size={16} color="#fff" />
               </View>
             </View>
             <View
@@ -85,7 +86,7 @@ function CategoryGridTile({
                 justifyContent: "flex-end",
               }}
             >
-              <Text style={styles.chatButton}>open chat</Text>
+              <Text style={styles.chatButton}>OPEN CHAT</Text>
             </View>
           </View>
         </Pressable>
@@ -102,9 +103,8 @@ const styles = StyleSheet.create({
     margin: 14,
     marginBottom: 0,
     height: 200,
-    borderRadius: 14,
+    borderRadius: 20,
     elevation: 4,
-    backgroundColor: "black",
     shadowColor: "black",
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 2 },
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
   },
-  //buttonPressed: { opacity: 1, backgroundColor: "black" },
+  //buttonPressed: { opacity: 0.5 backgroundColor: "white" },
   innerContainer: {
     flex: 1,
     padding: 16,
@@ -142,23 +142,28 @@ const styles = StyleSheet.create({
     right: -16,
     width: 130,
     textAlign: "center",
+    paddingBottom: 2,
+    borderBottomLeftRadius: 4,
+    borderTopLeftRadius: 4,
   },
   image: {
     flex: 1,
     justifyContent: "center",
-    tintColor: "black",
   },
   distance: {
     color: "white",
     fontWeight: "bold",
+    paddingBottom: 15,
   },
   chatButton: {
     color: "black",
     backgroundColor: "white",
-    padding: 8,
+    padding: 7,
+    paddingHorizontal: 10,
     borderRadius: 30,
-    fontSize: 20,
-    width: 110,
-    opacity: 0.7,
+    fontSize: 18,
+    opacity: 0.6,
+    width: "auto",
+    fontWeight: "bold",
   },
 });
