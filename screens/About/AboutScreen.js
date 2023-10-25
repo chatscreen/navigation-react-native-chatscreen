@@ -72,6 +72,29 @@ function AboutScreen({ route }) {
           <FontAwesome5 name={type} size={20} color="white" />
         </View>
       </View>
+      <View
+        style={{
+          position: "absolute",
+          width: "100%",
+          top: 230,
+          left: 0,
+          flexDirection: "row",
+          justifyContent: "space-between",
+          zIndex: 3,
+        }}
+      >
+        <Text
+          style={{
+            color: "white",
+            marginLeft: 10,
+            marginTop: 25,
+            fontWeight: "bold",
+          }}
+        >
+          {distance} km
+        </Text>
+        <Text style={styles.visited}>Visited {visited} times</Text>
+      </View>
       <Image source={{ uri: image }} style={styles.image} />
       <View style={styles.bottomBox} />
     </View>
@@ -94,5 +117,18 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 10,
     bottom: 5,
+  },
+  visited: {
+    color: "white",
+    backgroundColor: "#5F6FEE",
+    position: "absolute",
+    right: -16,
+    width: 130,
+    textAlign: "center",
+    marginRight: 14,
+    padding: 2,
+    fontWeight: "bold",
+    borderTopLeftRadius: 5,
+    borderBottomLeftRadius: 5,
   },
 });
