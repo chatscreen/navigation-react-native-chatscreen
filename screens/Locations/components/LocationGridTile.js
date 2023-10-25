@@ -159,6 +159,6 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     fontSize: 20,
     width: 110,
-    opacity: 0.6,
+    opacity: 0.7,
   },
 });
