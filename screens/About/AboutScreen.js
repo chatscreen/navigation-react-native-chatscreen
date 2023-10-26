@@ -95,6 +95,7 @@ function AboutScreen({ route }) {
         </Text>
         <Text style={styles.visited}>Visited {visited} times</Text>
       </View>
+      <Text style={styles.chatButton}>OPEN CHAT</Text>
       <Image source={{ uri: image }} style={styles.image} />
       <View style={styles.bottomBox}>
         <SidewaysScrollView />
@@ -132,5 +133,18 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,
+  },
+  chatButton: {
+    color: "white",
+    backgroundColor: "#FB4DAF",
+    padding: 10,
+    paddingHorizontal: 14,
+    borderRadius: 30,
+    fontSize: 18,
+    fontWeight: "bold",
+    position: "absolute",
+    alignSelf: "center",
+    zIndex: 3,
+    top: 260,
   },
 });

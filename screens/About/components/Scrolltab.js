@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { View, ScrollView, Text, Pressable } from "react-native";
 const SidewaysScrollView = () => {
   const options = ["info-circle", "award", "images", "calendar-alt", "poll"];
+  const [selectedOption, setSelectedOption] = useState(null);
+  const handleOptionPress = (option) => {
+    setSelectedOption(option);
+  };
   return (
     <View
       style={{ height: 70, borderBottomWidth: 1, borderColor: "lightgrey" }}
@@ -10,9 +14,7 @@ const SidewaysScrollView = () => {
       <ScrollView
         showsHorizontalScrollIndicator={false}
         horizontal
-        contentContainerStyle={{
-          height: 150,
-        }}
+        contentContainerStyle={{ height: 150 }}
       >
         {options.map((option, index) => (
           <Pressable
@@ -25,10 +27,26 @@ const SidewaysScrollView = () => {
               marginTop: 25,
               borderRightWidth: 1,
               borderColor: "lightgrey",
+              paddingBottom: 10,
             }}
-            onPress={() => console.log(option)}
+            onPress={() => handleOptionPress(option)}
           >
-            <FontAwesome5 name={option} size={30} color="lightgrey" />
+            <View
+              style={{
+                borderBottomWidth: selectedOption === option ? 7 : 0,
+                borderBottomColor: "#5F8EEE",
+                top: 42,
+                width: "100%",
+              }}
+            ></View>
+            <FontAwesome5
+              name={option}
+              size={25}
+              color="lightgrey"
+              style={{
+                color: selectedOption === option ? "#5F8EEE" : "lightgrey",
+              }}
+            />
           </Pressable>
         ))}
       </ScrollView>
