@@ -15,10 +15,9 @@ export default function App() {
   const toggleMenu = (toValue) => {
     Animated.timing(width, {
       toValue: toValue,
-      duration: 100, // Transition duration in milliseconds
-      useNativeDriver: false, // Set to true if using native driver
+      duration: 400,
+      useNativeDriver: false,
     }).start();
-    // Add your logic to toggle the menu here
   };
 
   const toggleMenuHandler = () => {
@@ -71,11 +70,5 @@ const styles = StyleSheet.create({
   },
   navbarContainer: {
     overflow: "hidden",
-  },
-  contentContainer: {
-    flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center",
   },
 });

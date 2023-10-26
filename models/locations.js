@@ -1,5 +1,16 @@
 class Category {
-  constructor(id, title, image, address, visited, distance, type, color) {
+  constructor(
+    id,
+    title,
+    image,
+    address,
+    visited,
+    distance,
+    type,
+    color,
+    about,
+    price
+  ) {
     this.id = id;
     this.title = title;
     this.image = image;
@@ -8,6 +19,8 @@ class Category {
     this.distance = distance;
     this.type = type;
     this.color = color;
+    this.about = about;
+    this.price = price;
   }
 }
 

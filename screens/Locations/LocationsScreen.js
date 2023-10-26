@@ -18,6 +18,8 @@ function LocationsScreen({ navigation, onPress }) {
         distance: itemData.item.distance,
         type: itemData.item.type,
         color: itemData.item.color,
+        about: itemData.item.about,
+        price: itemData.item.price,
       });
     }
     return (
@@ -38,19 +40,7 @@ function LocationsScreen({ navigation, onPress }) {
     <View style={styles.container}>
       <View>
         <LocationsHeader onPress={onPress} />
-        <View
-          style={{
-            positon: "absolute",
-            opacity: 0.9,
-            height: 6,
-            marginBottom: 0,
-            marginTop: 15,
-            backgroundColor: "white",
-            zIndex: 1,
-          }}
-        />
         <FlatList
-          style={{ marginTop: -6 }}
           data={CATEGORIES}
           keyExtractor={(item) => item.id}
           renderItem={renderLocationItem}

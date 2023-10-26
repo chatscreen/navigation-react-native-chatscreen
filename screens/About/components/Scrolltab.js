@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { View, ScrollView, Text, Pressable } from "react-native";
-const SidewaysScrollView = () => {
-  const options = ["info-circle", "award", "images", "calendar-alt", "poll"];
-  const [selectedOption, setSelectedOption] = useState(null);
-  const handleOptionPress = (option) => {
-    setSelectedOption(option);
-  };
+const SidewaysScrollView = ({ handleOptionPress, options, selectedOption }) => {
   return (
     <View
       style={{ height: 70, borderBottomWidth: 1, borderColor: "lightgrey" }}

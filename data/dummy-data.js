@@ -10,7 +10,9 @@ export const CATEGORIES = [
     "3",
     "1.25",
     "beer",
-    "#e56b1f"
+    "#e56b1f",
+    "ashs bar has been around since the 30's and we have great staff, come join us",
+    "$"
   ),
   new Location(
     "c2",
@@ -20,7 +22,9 @@ export const CATEGORIES = [
     "7",
     "5",
     "coffee",
-    "#e42c6a"
+    "#e42c6a",
+    "Fancy a coffee or a nice meal, come in and relax with our cozy warm atmosphere",
+    "$$"
   ),
   new Location(
     "c3",
@@ -30,7 +34,9 @@ export const CATEGORIES = [
     "1",
     "8",
     "beer",
-    "#3eb650"
+    "#3eb650",
+    "We have the hottest Dj's and the greatest spot to party in Dunedin, open late",
+    "$$$"
   ),
   new Location(
     "c4",
@@ -40,7 +46,9 @@ export const CATEGORIES = [
     "11",
     "8.5",
     "book",
-    "#e12b38"
+    "#e12b38",
+    "Books for every occasion",
+    "$"
   ),
   new Location(
     "c5",
@@ -50,7 +58,9 @@ export const CATEGORIES = [
     "4",
     "209",
     "plane",
-    "#2a3166"
+    "#2a3166",
+    "Come fly with us",
+    "$$$"
   ),
 
   new Location(
@@ -61,7 +71,9 @@ export const CATEGORIES = [
     "8",
     "9.75",
     "hamburger",
-    "#ee7879"
+    "#ee7879",
+    "Quality Gormet food at a price that wont be beaten!",
+    "$$"
   ),
   new Location(
     "c7",
@@ -71,7 +83,9 @@ export const CATEGORIES = [
     "2",
     "210.75",
     "hotel",
-    "#0f2557"
+    "#0f2557",
+    "6 bedroom dorms, 4 bedroom dorms and 2 bedroom dorms, free breakfast",
+    "$"
   ),
   new Location(
     "c8",
@@ -81,7 +95,9 @@ export const CATEGORIES = [
     "14",
     "859",
     "plus",
-    "#28559a"
+    "#28559a",
+    "We have the best staff and a range of appliances",
+    "$$"
   ),
   new Location(
     "c9",
@@ -91,7 +107,9 @@ export const CATEGORIES = [
     "12",
     "1453",
     "shopping-basket",
-    "#3778c2"
+    "#3778c2",
+    "Everything all in one place, great resturants also",
+    "$$$"
   ),
   new Location(
     "c10",
@@ -101,7 +119,9 @@ export const CATEGORIES = [
     "1",
     "1493",
     "school",
-    "#ff0059"
+    "#ff0059",
+    "ashs bar has been around since the 30's and we have great staff, come join us",
+    "$"
   ),
 ];
 

@@ -1,4 +1,5 @@
 import { Button } from "react-native";
+import React, { useState } from "react";
 import { Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import {
   View,
@@ -10,8 +11,21 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import SidewaysScrollView from "./components/Scrolltab";
+import LocationInfoPage from "./components/LocationInfoPage";
 import { Meals } from "../../data/dummy-data";
 function AboutScreen({ route }) {
+  const options = [
+    "info-circle",
+    "award",
+    "trophy",
+    "images",
+    "calendar-alt",
+    "poll",
+  ];
+  const [selectedOption, setSelectedOption] = useState("info-circle");
+  const handleOptionPress = (option) => {
+    setSelectedOption(option);
+  };
   const navigation = useNavigation();
 
   const title = route.params.title;
@@ -21,6 +35,8 @@ function AboutScreen({ route }) {
   const distance = route.params.distance;
   const type = route.params.type;
   const color = route.params.color;
+  const about = route.params.about;
+  const price = route.params.price;
 
   StatusBar.setBarStyle("light-content", true);
 
@@ -34,11 +50,6 @@ function AboutScreen({ route }) {
       >
         <Ionicons name="arrow-back-sharp" size={40} color="white" />
       </Pressable>
-      {/*<Text>{image}</Text>*/}
-      {/*<Text>{address}</Text>*/}
-      {/*<Text>{visited}</Text>*/}
-      {/*<Text>{distance}</Text>*/}
-      {/*<Text>{color}</Text>*/}
       <View
         style={{
           position: "absolute",
@@ -98,7 +109,19 @@ function AboutScreen({ route }) {
       <Text style={styles.chatButton}>OPEN CHAT</Text>
       <Image source={{ uri: image }} style={styles.image} />
       <View style={styles.bottomBox}>
-        <SidewaysScrollView />
+        <SidewaysScrollView
+          handleOptionPress={handleOptionPress}
+          options={options}
+          selectedOption={selectedOption}
+        />
+        <View>
+          <LocationInfoPage
+            about={about}
+            price={price}
+            address={address}
+            selectedOption={selectedOption}
+          />
+        </View>
       </View>
     </View>
   );
