@@ -2,6 +2,7 @@ import { Text, View, FlatList, StyleSheet, Dimensions } from "react-native";
 import LocationGridTile from "./components/LocationGridTile";
 import LocationsHeader from "./components/LocationsHeader";
 import { CATEGORIES } from "../../data/dummy-data";
+import { useNavigation } from "@react-navigation/native";
 
 // helper function to keep the main jsx cleaner
 const screenWidth = Dimensions.get("window").width;
@@ -9,7 +10,7 @@ const screenWidth = Dimensions.get("window").width;
 function LocationsScreen({ navigation, onPress }) {
   function renderLocationItem(itemData) {
     function pressHandler() {
-      navigation.navigate("About", {
+      navigation.navigate("LocationInfo", {
         categoryId: itemData.item.id,
         title: itemData.item.title,
         image: itemData.item.image,

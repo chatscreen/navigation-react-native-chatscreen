@@ -6,6 +6,9 @@ import Navbar from "./shared/components/SlidingSideMenu";
 
 import LocationsScreen from "./screens/Locations/LocationsScreen";
 import AboutScreen from "./screens/About/AboutScreen";
+import NewsFeedScreen from "./screens/Newsfeed/NewsFeedScreen";
+import LocationInfo from "./screens/LocationInfo/LocationInfoScreen";
+import ForumStatusScreen from "./screens/ForumStatus/ForumsStatusScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -55,7 +58,16 @@ export default function App() {
                 <LocationsScreen {...props} onPress={toggleMenuHandler} />
               )}
             </Stack.Screen>
-            <Stack.Screen name="About" component={AboutScreen} />
+            <Stack.Screen name="Newsfeed">
+              {(props) => (
+                <NewsFeedScreen {...props} onPress={toggleMenuHandler} />
+              )}
+            </Stack.Screen>
+            <Stack.Screen
+              name="LocationInfo"
+              onPress={toggleMenuHandler}
+              component={LocationInfo}
+            />
           </Stack.Navigator>
         </View>
       </NavigationContainer>
