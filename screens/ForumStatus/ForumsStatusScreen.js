@@ -1,6 +1,18 @@
-import { Text } from "react-native-web";
-const ForumStatusScreen = () => {
-  return <Text>Hi</Text>;
-};
+import { fontawesome5 } from "@expo/vector-icons";
+import { text, view, pressable } from "react-native";
+function forumstatus({ onpress }) {
+  const onpresshandler = () => {
+    onpress;
+  };
 
-export default ForumStatusScreen;
+  return (
+    <view style={{ margin: 30 }}>
+      <pressable onpress={onpresshandler}>
+        <fontawesome5 name={"back"} size={16} color="black" />
+      </pressable>
+      <text>forum status</text>
+    </view>
+  );
+}
+
+export default forumstatus;

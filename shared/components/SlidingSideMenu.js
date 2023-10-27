@@ -5,14 +5,9 @@ import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 const Navbar = ({ toggleMenuClose }) => {
   const navigation = useNavigation();
 
-  const goToLocations = () => {
+  const goToScreen = (screenName) => {
     toggleMenuClose();
-    navigation.navigate("Locations");
-  };
-
-  const goToNewsFeed = () => {
-    toggleMenuClose();
-    navigation.navigate("Newsfeed");
+    navigation.navigate(screenName);
   };
 
   const image =
@@ -34,60 +29,64 @@ const Navbar = ({ toggleMenuClose }) => {
       <View style={styles.menu}>
         <Pressable
           style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={goToLocations}
+          onPress={() => {
+            goToScreen("Locations");
+          }}
         >
           <FontAwesome5 name="map-marker-alt" size={30} color="#fff" />
           <Text style={styles.menuText}>LOCATIONS</Text>
         </Pressable>
+        {/*<Pressable*/}
+        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
+        {/*onPress={goToScreen("Newsfeed")}*/}
+        {/*>*/}
+        {/*<FontAwesome5 name="newspaper" size={30} color="#fff" />*/}
+        {/*<Text style={styles.menuText}>NEWSFEED</Text>*/}
+        {/*</Pressable>*/}
+        {/*<Pressable*/}
+        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
+        {/*onPress={goToScreen("Newsfeed")}*/}
+        {/*>*/}
+        {/*<FontAwesome5 name="user-alt" size={30} color="#fff" />*/}
+        {/*<Text style={styles.menuText}>PROFILE</Text>*/}
+        {/*</Pressable>*/}
+        {/*<Pressable*/}
+        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
+        {/*onPress={goToScreen("Newsfeed")}*/}
+        {/*>*/}
+        {/*<FontAwesome5 name="medal" size={30} color="#fff" />*/}
+        {/*<Text style={styles.menuText}>FORUM STATUS</Text>*/}
+        {/*</Pressable>*/}
+        {/*<Pressable*/}
+        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
+        {/*onPress={goToScreen("Newsfeed")}*/}
+        {/*>*/}
+        {/*<FontAwesome5 name="trophy" size={30} color="#fff" />*/}
+        {/*<Text style={styles.menuText}>HIGH SCORES</Text>*/}
+        {/*</Pressable>*/}
+        {/*<Pressable*/}
+        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
+        {/*onPress={goToScreen("Newsfeed")}*/}
+        {/*>*/}
+        {/*<Ionicons name="settings" size={30} color="#fff" />*/}
+        {/*<Text style={styles.menuText}>SETTINGS</Text>*/}
+        {/*</Pressable>*/}
         <Pressable
           style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={goToNewsFeed}
-        >
-          <FontAwesome5 name="newspaper" size={30} color="#fff" />
-          <Text style={styles.menuText}>NEWSFEED</Text>
-        </Pressable>
-        <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={goToLocations && toggleMenuClose}
-        >
-          <FontAwesome5 name="user-alt" size={30} color="#fff" />
-          <Text style={styles.menuText}>PROFILE</Text>
-        </Pressable>
-        <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={goToLocations && toggleMenuClose}
-        >
-          <FontAwesome5 name="medal" size={30} color="#fff" />
-          <Text style={styles.menuText}>FORUM STATUS</Text>
-        </Pressable>
-        <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={goToLocations && toggleMenuClose}
-        >
-          <FontAwesome5 name="trophy" size={30} color="#fff" />
-          <Text style={styles.menuText}>HIGH SCORES</Text>
-        </Pressable>
-        <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={goToLocations && toggleMenuClose}
-        >
-          <Ionicons name="settings" size={30} color="#fff" />
-          <Text style={styles.menuText}>SETTINGS</Text>
-        </Pressable>
-        <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={goToLocations && toggleMenuClose}
+          onPress={() => {
+            goToScreen("Feedback");
+          }}
         >
           <Ionicons name="arrow-redo-sharp" size={30} color="#fff" />
           <Text style={styles.menuText}>FEEDBACK</Text>
         </Pressable>
-        <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={goToLocations && toggleMenuClose}
-        >
-          <FontAwesome5 name="info-circle" size={30} color="#fff" />
-          <Text style={styles.menuText}>ABOUT</Text>
-        </Pressable>
+        {/*<Pressable*/}
+        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
+        {/*onPress={goToScreen("Newsfeed")}*/}
+        {/*>*/}
+        {/*<FontAwesome5 name="info-circle" size={30} color="#fff" />*/}
+        {/*<Text style={styles.menuText}>ABOUT</Text>*/}
+        {/*</Pressable>*/}
       </View>
       <View
         style={{

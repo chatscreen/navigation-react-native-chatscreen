@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 // helper function to keep the main jsx cleaner
 const screenWidth = Dimensions.get("window").width;
 
-function LocationsScreen({ navigation, onPress }) {
+function LocationsScreen({ onPress, navigation }) {
   function renderLocationItem(itemData) {
     function pressHandler() {
       navigation.navigate("LocationInfo", {

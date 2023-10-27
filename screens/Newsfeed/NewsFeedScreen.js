@@ -6,7 +6,7 @@ function NewsFeedScreen({ onPress }) {
       <Pressable onPress={onPress}>
         <Ionicons name="arrow-back-sharp" size={16} color="black" />
       </Pressable>
-      <Text>About Screen</Text>
+      <Text>News Feed</Text>
     </View>
   );
 }

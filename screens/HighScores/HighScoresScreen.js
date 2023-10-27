@@ -1,6 +1,6 @@
-import { Fontawesome5 } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { Text, View, Pressable } from "react-native";
-function AboutScreen({ onPress }) {
+function HighScores({ onPress }) {
   const onPressHandler = () => {
     onPress;
   };
@@ -8,11 +8,11 @@ function AboutScreen({ onPress }) {
   return (
     <View style={{ margin: 30 }}>
       <Pressable onPress={onPressHandler}>
-        <Fontawesome5 name={"back"} size={16} color="black" />
+        <FontAwesome5 name={"back"} size={16} color="black" />
       </Pressable>
-      <Text>About Screen</Text>
+      <Text>High Scores</Text>
     </View>
   );
 }
 
-export default AboutScreen;
+export default HighScores;
