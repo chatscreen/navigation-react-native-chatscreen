@@ -28,7 +28,7 @@ const Navbar = ({ toggleMenuClose }) => {
       </View>
       <View style={styles.menu}>
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
+          style={styles.menuItem}
           onPress={() => {
             goToScreen("Locations");
           }}
@@ -37,7 +37,7 @@ const Navbar = ({ toggleMenuClose }) => {
           <Text style={styles.menuText}>LOCATIONS</Text>
         </Pressable>
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
+          style={styles.menuItem}
           onPress={() => {
             goToScreen("Newsfeed");
           }}
@@ -46,7 +46,7 @@ const Navbar = ({ toggleMenuClose }) => {
           <Text style={styles.menuText}>NEWSFEED</Text>
         </Pressable>
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
+          style={styles.menuItem}
           onPress={() => {
             goToScreen("Profile");
           }}
@@ -55,7 +55,7 @@ const Navbar = ({ toggleMenuClose }) => {
           <Text style={styles.menuText}>PROFILE</Text>
         </Pressable>
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
+          style={styles.menuItem}
           onPress={() => {
             goToScreen("ForumStatus");
           }}
@@ -64,7 +64,7 @@ const Navbar = ({ toggleMenuClose }) => {
           <Text style={styles.menuText}>FORUM STATUS</Text>
         </Pressable>
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
+          style={styles.menuItem}
           onPress={() => {
             goToScreen("HighScores");
           }}
@@ -73,7 +73,7 @@ const Navbar = ({ toggleMenuClose }) => {
           <Text style={styles.menuText}>HIGH SCORES</Text>
         </Pressable>
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
+          style={styles.menuItem}
           onPress={() => {
             goToScreen("Settings");
           }}
@@ -82,7 +82,7 @@ const Navbar = ({ toggleMenuClose }) => {
           <Text style={styles.menuText}>SETTINGS</Text>
         </Pressable>
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center" }}
+          style={styles.menuItem}
           onPress={() => {
             goToScreen("Feedback");
           }}
@@ -90,37 +90,18 @@ const Navbar = ({ toggleMenuClose }) => {
           <Ionicons name="arrow-redo-sharp" size={30} color="#fff" />
           <Text style={styles.menuText}>FEEDBACK</Text>
         </Pressable>
-        {/*<Pressable*/}
-        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
-        {/*onPress={goToScreen("Newsfeed")}*/}
-        {/*>*/}
-        {/*<FontAwesome5 name="info-circle" size={30} color="#fff" />*/}
-        {/*<Text style={styles.menuText}>ABOUT</Text>*/}
-        {/*</Pressable>*/}
-      </View>
-      <View
-        style={{
-          width: "100%",
-          backgroundColor: "#2658c1",
-          flex: 1.3,
-          justifyContent: "center",
-        }}
-      >
-        <Text
-          style={{
-            color: "white",
-            fontSize: 20,
-            marginLeft: 30,
-            borderRadius: 30,
-            backgroundColor: "#FB4DAF",
-            padding: 10,
-            width: 150,
-            textAlign: "center",
-            elevation: 6,
+        <Pressable
+          style={styles.menuItem}
+          onPress={() => {
+            goToScreen("About");
           }}
         >
-          LOG OUT
-        </Text>
+          <FontAwesome5 name="info-circle" size={30} color="#fff" />
+          <Text style={styles.menuText}>ABOUT</Text>
+        </Pressable>
+      </View>
+      <View style={styles.logOutContainer}>
+        <Text style={styles.LogoutButton}>LOG OUT</Text>
       </View>
     </View>
   );
@@ -160,6 +141,27 @@ const styles = StyleSheet.create({
     textAlign: "left",
     paddingLeft: 20,
     color: "white",
+  },
+  menuItem: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  logOutContainer: {
+    width: "100%",
+    backgroundColor: "#2658c1",
+    flex: 1.3,
+    justifyContent: "center",
+  },
+  LogoutButton: {
+    color: "white",
+    fontSize: 20,
+    marginLeft: 30,
+    borderRadius: 30,
+    backgroundColor: "#FB4DAF",
+    padding: 10,
+    width: 150,
+    textAlign: "center",
+    elevation: 6,
   },
 });
 export default Navbar;
