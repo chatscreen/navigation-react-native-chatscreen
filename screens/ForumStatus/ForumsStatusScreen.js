@@ -1,17 +1,17 @@
-import { fontawesome5 } from "@expo/vector-icons";
-import { text, view, pressable } from "react-native";
-function forumstatus({ onpress }) {
-  const onpresshandler = () => {
-    onpress;
-  };
-
+import { Ionicons } from "@expo/vector-icons";
+import { Text, View, Pressable } from "react-native";
+function forumstatus({ onPress }) {
   return (
-    <view style={{ margin: 30 }}>
-      <pressable onpress={onpresshandler}>
-        <fontawesome5 name={"back"} size={16} color="black" />
-      </pressable>
-      <text>forum status</text>
-    </view>
+    <View style={{ margin: 30 }}>
+      <Pressable
+        onPress={() => {
+          onPress();
+        }}
+      >
+        <Ionicons name={"arrow-back-sharp"} size={16} color="black" />
+      </Pressable>
+      <Text>forum status</Text>
+    </View>
   );
 }
 

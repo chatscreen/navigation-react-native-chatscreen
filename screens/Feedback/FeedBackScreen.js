@@ -11,7 +11,7 @@ const Feedback = ({ onPress }) => {
       >
         <Ionicons name={"arrow-back-sharp"} size={16} color="black" />
       </Pressable>
-      <Text>forum status</Text>
+      <Text>FeedBack</Text>
     </View>
   );
 };

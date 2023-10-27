@@ -67,37 +67,37 @@ export default function App() {
               onPress={toggleMenuHandler}
               component={LocationInfo}
             />
-            {/*<Stack.Screen name="Newsfeed">*/}
-            {/*{(props) => (*/}
-            {/*<NewsFeedScreen {...props} onPress={toggleMenuHandler} />*/}
-            {/*)}*/}
-            {/*</Stack.Screen>*/}
-            {/*<Stack.Screen name="Profile">*/}
-            {/*{(props) => (*/}
-            {/*<ProfileScreen {...props} onPress={toggleMenuHandler} />*/}
-            {/*)}*/}
-            {/*</Stack.Screen>*/}
-            {/*<Stack.Screen name="ForumStatus">*/}
-            {/*{(props) => (*/}
-            {/*<ForumStatusScreen {...props} onPress={toggleMenuHandler} />*/}
-            {/*)}*/}
-            {/*</Stack.Screen>*/}
-            {/*<Stack.Screen name="HighScores">*/}
-            {/*{(props) => <HighScores {...props} onPress={toggleMenuHandler} />}*/}
-            {/*</Stack.Screen>*/}
-            {/*<Stack.Screen name="Settings">*/}
-            {/*{(props) => (*/}
-            {/*<SettingsScreen {...props} onPress={toggleMenuHandler} />*/}
-            {/*)}*/}
-            {/*</Stack.Screen>*/}
+            <Stack.Screen name="Newsfeed">
+              {(props) => (
+                <NewsFeedScreen {...props} onPress={toggleMenuHandler} />
+              )}
+            </Stack.Screen>
+            <Stack.Screen name="Profile">
+              {(props) => (
+                <ProfileScreen {...props} onPress={toggleMenuHandler} />
+              )}
+            </Stack.Screen>
+            <Stack.Screen name="ForumStatus">
+              {(props) => (
+                <ForumStatusScreen {...props} onPress={toggleMenuHandler} />
+              )}
+            </Stack.Screen>
+            <Stack.Screen name="HighScores">
+              {(props) => <HighScores {...props} onPress={toggleMenuHandler} />}
+            </Stack.Screen>
+            <Stack.Screen name="Settings">
+              {(props) => (
+                <SettingsScreen {...props} onPress={toggleMenuHandler} />
+              )}
+            </Stack.Screen>
             <Stack.Screen name="Feedback">
               {(props) => <Feedback {...props} onPress={toggleMenuHandler} />}
             </Stack.Screen>
-            {/*<Stack.Screen name="About">*/}
-            {/*{(props) => (*/}
-            {/*<AboutScreen {...props} onPress={toggleMenuHandler} />*/}
-            {/*)}*/}
-            {/*</Stack.Screen>*/}
+            <Stack.Screen name="About">
+              {(props) => (
+                <AboutScreen {...props} onPress={toggleMenuHandler} />
+              )}
+            </Stack.Screen>
           </Stack.Navigator>
         </View>
       </NavigationContainer>

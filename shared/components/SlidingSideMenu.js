@@ -36,41 +36,51 @@ const Navbar = ({ toggleMenuClose }) => {
           <FontAwesome5 name="map-marker-alt" size={30} color="#fff" />
           <Text style={styles.menuText}>LOCATIONS</Text>
         </Pressable>
-        {/*<Pressable*/}
-        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
-        {/*onPress={goToScreen("Newsfeed")}*/}
-        {/*>*/}
-        {/*<FontAwesome5 name="newspaper" size={30} color="#fff" />*/}
-        {/*<Text style={styles.menuText}>NEWSFEED</Text>*/}
-        {/*</Pressable>*/}
-        {/*<Pressable*/}
-        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
-        {/*onPress={goToScreen("Newsfeed")}*/}
-        {/*>*/}
-        {/*<FontAwesome5 name="user-alt" size={30} color="#fff" />*/}
-        {/*<Text style={styles.menuText}>PROFILE</Text>*/}
-        {/*</Pressable>*/}
-        {/*<Pressable*/}
-        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
-        {/*onPress={goToScreen("Newsfeed")}*/}
-        {/*>*/}
-        {/*<FontAwesome5 name="medal" size={30} color="#fff" />*/}
-        {/*<Text style={styles.menuText}>FORUM STATUS</Text>*/}
-        {/*</Pressable>*/}
-        {/*<Pressable*/}
-        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
-        {/*onPress={goToScreen("Newsfeed")}*/}
-        {/*>*/}
-        {/*<FontAwesome5 name="trophy" size={30} color="#fff" />*/}
-        {/*<Text style={styles.menuText}>HIGH SCORES</Text>*/}
-        {/*</Pressable>*/}
-        {/*<Pressable*/}
-        {/*style={{ flexDirection: "row", alignItems: "center" }}*/}
-        {/*onPress={goToScreen("Newsfeed")}*/}
-        {/*>*/}
-        {/*<Ionicons name="settings" size={30} color="#fff" />*/}
-        {/*<Text style={styles.menuText}>SETTINGS</Text>*/}
-        {/*</Pressable>*/}
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center" }}
+          onPress={() => {
+            goToScreen("Newsfeed");
+          }}
+        >
+          <FontAwesome5 name="newspaper" size={30} color="#fff" />
+          <Text style={styles.menuText}>NEWSFEED</Text>
+        </Pressable>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center" }}
+          onPress={() => {
+            goToScreen("Profile");
+          }}
+        >
+          <FontAwesome5 name="user-alt" size={30} color="#fff" />
+          <Text style={styles.menuText}>PROFILE</Text>
+        </Pressable>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center" }}
+          onPress={() => {
+            goToScreen("ForumStatus");
+          }}
+        >
+          <FontAwesome5 name="medal" size={30} color="#fff" />
+          <Text style={styles.menuText}>FORUM STATUS</Text>
+        </Pressable>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center" }}
+          onPress={() => {
+            goToScreen("HighScores");
+          }}
+        >
+          <FontAwesome5 name="trophy" size={30} color="#fff" />
+          <Text style={styles.menuText}>HIGH SCORES</Text>
+        </Pressable>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center" }}
+          onPress={() => {
+            goToScreen("Settings");
+          }}
+        >
+          <Ionicons name="settings" size={30} color="#fff" />
+          <Text style={styles.menuText}>SETTINGS</Text>
+        </Pressable>
         <Pressable
           style={{ flexDirection: "row", alignItems: "center" }}
           onPress={() => {
