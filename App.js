@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyleSheet, Text, View, Animated } from "react-native";
+import { StyleSheet, Text, View, Animated, StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Navbar from "./shared/components/SlidingSideMenu";
@@ -22,7 +22,7 @@ export default function App() {
   const toggleMenu = (toValue) => {
     Animated.timing(width, {
       toValue: toValue,
-      duration: 400,
+      duration: 300,
       useNativeDriver: false,
     }).start();
   };

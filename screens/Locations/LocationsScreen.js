@@ -1,4 +1,12 @@
-import { Text, View, FlatList, StyleSheet, Dimensions } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import {
+  Text,
+  View,
+  FlatList,
+  StyleSheet,
+  Dimensions,
+  StatusBar,
+} from "react-native";
 import LocationGridTile from "./components/LocationGridTile";
 import LocationsHeader from "./components/LocationsHeader";
 import { CATEGORIES } from "../../data/dummy-data";
@@ -39,12 +47,26 @@ function LocationsScreen({ onPress, navigation }) {
 
   return (
     <View style={styles.container}>
+      <StatusBar
+        barStyle="dark-content"
+        translucent={true}
+        backgroundColor="transparent"
+      />
       <View>
         <LocationsHeader onPress={onPress} />
+        <LinearGradient
+          colors={["white", "white", "white", "transparent"]}
+          style={{
+            height: 25,
+            zIndex: 2,
+          }}
+        />
         <FlatList
           data={CATEGORIES}
           keyExtractor={(item) => item.id}
           renderItem={renderLocationItem}
+          style={{ marginTop: -10, zIndex: 1, marginBottom: 440 }}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </View>
@@ -54,5 +76,5 @@ function LocationsScreen({ onPress, navigation }) {
 export default LocationsScreen;
 
 const styles = StyleSheet.create({
-  container: { width: screenWidth },
+  container: { width: screenWidth, backgroundColor: "white" },
 });

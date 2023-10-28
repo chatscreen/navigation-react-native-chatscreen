@@ -38,10 +38,13 @@ function AboutScreen({ route }) {
   const about = route.params.about;
   const price = route.params.price;
 
-  StatusBar.setBarStyle("light-content", true);
-
   return (
     <View style={styles.container}>
+      <StatusBar
+        barStyle="white-content"
+        translucent={true}
+        backgroundColor="transparent"
+      />
       <Pressable
         style={{ left: 10, top: 75, zIndex: 1 }}
         onPress={() => {

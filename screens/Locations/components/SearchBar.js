@@ -13,12 +13,12 @@ const SearchBar = () => {
 };
 const styles = StyleSheet.create({
   container: {
-    width: "98%",
     height: 50,
-    backgroundColor: "lightgrey",
+    backgroundColor: "#F2F3F3",
     alignSelf: "center",
-    marginTop: 20,
+    marginTop: 15,
     borderRadius: 8,
+    width: 390,
   },
   bar: {
     flex: 1,
@@ -28,9 +28,11 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
+    color: "#BFBFBF",
   },
   text: {
-    fontSize: 16,
+    fontSize: 18,
+    color: "#BFBFBF",
   },
 });
 export default SearchBar;

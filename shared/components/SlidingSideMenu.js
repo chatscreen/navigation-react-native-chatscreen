@@ -132,17 +132,19 @@ const styles = StyleSheet.create({
     backgroundColor: "#2658c1",
     justifyContent: "space-evenly",
     alignItems: "center",
-    paddingLeft: 60,
   },
   menuText: {
-    width: 300,
+    width: "100%",
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: "600",
     textAlign: "left",
     paddingLeft: 20,
     color: "white",
+    overflow: "hidden",
+    maxHeight: 25,
   },
   menuItem: {
+    marginLeft: 35,
     flexDirection: "row",
     alignItems: "center",
   },
@@ -162,6 +164,7 @@ const styles = StyleSheet.create({
     width: 150,
     textAlign: "center",
     elevation: 6,
+    position: "absolute",
   },
 });
 export default Navbar;

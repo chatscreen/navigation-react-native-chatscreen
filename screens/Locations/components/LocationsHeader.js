@@ -24,7 +24,7 @@ const LocationsHeader = ({ onPress }) => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 14,
     alignItems: "center",
   },
   flexGrid: {
