@@ -13,11 +13,19 @@ import HighScores from "./screens/HighScores/HighScoresScreen";
 import SettingsScreen from "./screens/Settings/SettingsScreen";
 import Feedback from "./screens/Feedback/FeedBackScreen";
 import AboutScreen from "./screens/About/AboutScreen";
+import ModalComponent from "./screens/Locations/components/ModalComponents";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [width, setWidth] = useState(new Animated.Value(0));
+  const [modalVisible, setModalVisible] = useState(false);
+  const handleOpenModal = () => {
+    setModalVisible(true);
+  };
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
 
   const toggleMenu = (toValue) => {
     Animated.timing(width, {
@@ -37,6 +45,7 @@ export default function App() {
 
   return (
     <>
+      <ModalComponent visible={true} onClose={handleCloseModal} />
       <NavigationContainer>
         <View style={styles.container}>
           <Animated.View
