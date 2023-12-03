@@ -45,6 +45,7 @@ export default function App() {
 
   return (
     <>
+      {/*this is hardcoded to true for now, should be a turnary eventually*/}
       <ModalComponent visible={true} onClose={handleCloseModal} />
       <NavigationContainer>
         <View style={styles.container}>
